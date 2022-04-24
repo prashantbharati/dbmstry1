@@ -4,13 +4,14 @@ var mysql = require("mysql2");
 var connection = require("./database");
 
 app.get("/", function (req, res) {
-  let sql = "SELECT * FROM employee_info";
+  let sql = "SELECT * FROM customer";
   connection.query(sql, function (err, results) {
+    console.log(results);
     if (err) throw err;
-    res.send(results);
+    else res.send(results);
   });
 
-  res.send("hey there");
+  // res.send("hey there");
 });
 
 app.listen(3000, function () {
