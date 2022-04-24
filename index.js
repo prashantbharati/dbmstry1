@@ -5,6 +5,8 @@ var connection = require("./database");
 
 app.get("/", function (req, res) {
   let sql = "SELECT * FROM customer";
+  let sql2 =
+    "insert into customer values(2,'renu','9990889687','darjeeling, shimla');";
   connection.query(sql, function (err, results) {
     console.log(results);
     if (err) throw err;
