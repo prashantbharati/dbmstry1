@@ -13,7 +13,7 @@ app.get("/", function (req, res) {
     else res.send(results);
   });
 
-  // res.send("hey there");
+  res.send("hey there");
 });
 
 app.listen(3000, function () {
