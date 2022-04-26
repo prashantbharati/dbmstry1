@@ -33,9 +33,9 @@ const Form = () => {
           <Typography variant="h6">Order what you like</Typography>
 
           <TextField
-            name="title"
+            name="name"
             variant="outlined"
-            label="Title"
+            label="Name"
             fullWidth
             value={postData.title}
             onChange={(e) =>
@@ -43,9 +43,9 @@ const Form = () => {
             }
           />
           <TextField
-            name="message"
+            name="phnumber"
             variant="outlined"
-            label="Message"
+            label="Ph Number"
             fullWidth
             value={postData.message}
             onChange={(e) =>
@@ -53,9 +53,19 @@ const Form = () => {
             }
           />
           <TextField
-            name="tags"
+            name="adrs"
             variant="outlined"
-            label="Tags (coma seperated)"
+            label="Address"
+            fullWidth
+            value={postData.tags}
+            onChange={(e) =>
+              setPostData({ ...postData, tags: e.target.value.split(",") })
+            }
+          />
+          <TextField
+            name="item"
+            variant="outlined"
+            label="What's Your Treat"
             fullWidth
             value={postData.tags}
             onChange={(e) =>

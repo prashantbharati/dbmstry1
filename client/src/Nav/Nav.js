@@ -7,7 +7,7 @@ const Nav = () => {
   const classes = useStyles();
   return (
     <>
-      <div style={{ height: "14vh" }} className={classes.header}>
+      <div style={{ height: "5vh" }} className={classes.header}>
         <Grid container>
           <Grid item md={3}>
             <a id="home" className={classes.headerullia} href="/">

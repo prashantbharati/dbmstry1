@@ -13,6 +13,7 @@ const User = () => {
       >
         <Nav />
       </div>
+
       <div
         style={{
           display: "flex",
@@ -24,6 +25,11 @@ const User = () => {
             "linear-gradient(90deg,rgb(227, 16, 255) 0%,rgb(255, 252, 100) 100%)",
         }}
       >
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Form />
       </div>
     </>
