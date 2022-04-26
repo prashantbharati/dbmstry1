@@ -16,10 +16,10 @@ const Form = () => {
   };
 
   const [postData, setPostData] = useState({
-    title: "",
-    message: "",
-    tags: "",
-    selectedFile: "",
+    name: "",
+    phnumber: "",
+    adrs: "",
+    item: "",
   });
   return (
     <div>
@@ -38,9 +38,7 @@ const Form = () => {
             label="Name"
             fullWidth
             value={postData.title}
-            onChange={(e) =>
-              setPostData({ ...postData, title: e.target.value })
-            }
+            onChange={(e) => setPostData({ ...postData, name: e.target.value })}
           />
           <TextField
             name="phnumber"
@@ -49,7 +47,7 @@ const Form = () => {
             fullWidth
             value={postData.message}
             onChange={(e) =>
-              setPostData({ ...postData, message: e.target.value })
+              setPostData({ ...postData, phnumber: e.target.value })
             }
           />
           <TextField
@@ -59,7 +57,7 @@ const Form = () => {
             fullWidth
             value={postData.tags}
             onChange={(e) =>
-              setPostData({ ...postData, tags: e.target.value.split(",") })
+              setPostData({ ...postData, adrs: e.target.value.split(",") })
             }
           />
           <TextField
@@ -69,7 +67,7 @@ const Form = () => {
             fullWidth
             value={postData.tags}
             onChange={(e) =>
-              setPostData({ ...postData, tags: e.target.value.split(",") })
+              setPostData({ ...postData, item: e.target.value.split(",") })
             }
           />
 
