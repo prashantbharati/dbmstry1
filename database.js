@@ -1,10 +1,9 @@
-var mysql = require("mysql2");
-
+import mysql from "mysql2";
 var connection = mysql.createConnection({
   host: "localhost",
-  database: "employee_database",
+  database: "homedelivery",
   user: "root",
   password: "Shishir@123",
 });
 
-module.exports = connection;
+export default connection;
