@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Button, Grid } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import useStyles from "./styles";
 const Home = () => {
   const classes = useStyles();
@@ -54,6 +55,8 @@ const Home = () => {
                   backgroundColor: "white",
                   fontWeight: "700",
                 }}
+                component={Link}
+                to="/guy"
                 variant="contained"
                 align="right"
               >
@@ -70,6 +73,8 @@ const Home = () => {
                   width: "150px",
                   borderRadius: "999px 999px 999px 999px",
                 }}
+                component={Link}
+                to="/user"
                 variant="outline-dark"
                 align="right"
               >
