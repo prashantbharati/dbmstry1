@@ -3,7 +3,20 @@ import mysql from "mysql2";
 import connection from "../database.js";
 
 const addposts = (req, res) => {
-  const post = req.body.phnumber;
+  const post = req.body;
+
+  let sql3 = "show tables";
+  let sql = "SELECT * FROM customer";
+
+  let cid = Math.floor(Math.random() * 100000);
+
+  let sql2 = `insert into customer values(${cid},"${post.username}","${post.phnumber}","${post.adrs}");`;
+  connection.query(sql2, function (err, results) {
+    console.log(results);
+    if (err) throw err;
+    else res.send(results);
+  });
+
   console.log(post);
 };
 

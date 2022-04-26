@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import axios from "axios";
 import useStyles from "./styles";
+import { useNavigate } from "react-router-dom";
 
 const api = axios.create({
   baseURL: `http://localhost:5000/user`,
 });
-const Form = () => {
+const Form = ({ oid, setoid }) => {
   const classes = useStyles();
-
+  const navigate = useNavigate();
   const [postData, setPostData] = useState({
     username: "",
     phnumber: "",
@@ -22,13 +23,16 @@ const Form = () => {
 
   const performpost = async () => {
     const { data } = await api.post("/", {
-      username: postData.name,
+      username: postData.username,
       phnumber: postData.phnumber,
       adrs: postData.adrs,
       item: postData.item,
     });
     try {
       console.log(data, "post");
+
+      console.log(oid, "oid");
+      navigate("/endpage1");
     } catch (error) {
       console.log(error);
     }
@@ -45,7 +49,7 @@ const Form = () => {
 
     performpost();
 
-    clear();
+    // clear();
   };
 
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form/Form.js";
 import Nav from "./Nav/Nav.js";
-const User = () => {
+const User = ({ oid, setoid }) => {
   return (
     <>
       <div
@@ -30,7 +30,7 @@ const User = () => {
         <br />
         <br />
         <br />
-        <Form />
+        <Form oid={oid} setoid={setoid} />
       </div>
     </>
   );
