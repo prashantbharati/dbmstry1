@@ -3,8 +3,13 @@ import mysql from "mysql2";
 import connection from "./database.js";
 import guyRoutes from "./routes/guy.js";
 import userRoutes from "./routes/user.js";
-
+import cors from "cors";
+import bodyParser from "body-parser";
 const app = express();
+
+app.use(cors());
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 app.get("/", function (req, res) {
   let sql3 = "show tables";
