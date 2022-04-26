@@ -7,10 +7,11 @@ import userRoutes from "./routes/user.js";
 const app = express();
 
 app.get("/", function (req, res) {
+  let sql3 = "show tables";
   let sql = "SELECT * FROM food";
   let sql2 =
     "insert into customer values(2,'renu','9990889687','darjeeling, shimla');";
-  connection.query(sql, function (err, results) {
+  connection.query(sql3, function (err, results) {
     console.log(results);
     if (err) throw err;
     else res.send(results);
