@@ -5,9 +5,6 @@ import connection from "../database.js";
 const addposts = (req, res) => {
   const post = req.body;
 
-  let sql3 = "show tables";
-  let sql = "SELECT * FROM customer";
-
   let cid = Math.floor(Math.random() * 100000);
   let oid = Math.floor(Math.random() * 100000);
 
@@ -20,22 +17,27 @@ const addposts = (req, res) => {
   var today = new Date();
   var time =
     today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  ("insert into customer values(10,'renu','9990889687','darjeeling, shimla');insert into orders VALUES (2,'01-05-2022','8:25 AM',2);");
-
+  3;
   let sql2 =
     `insert into customer values(${cid},"${post.username}","${post.phnumber}","${post.adrs}");\n` +
     `
   INSERT INTO orders VALUES (${oid},"${date}","${time}",${cid});
   `;
 
-  'insert into customer values(63537,"Sai praneeth","9876547896","Hydrabad");\n' +
-    "  INSERT INTO orders VALUES (39209,2022-5-1,9:44:27,63537);\n" +
-    "  ";
+  let sql3 = `select food_id from food where food_name="${post.item}"`;
 
-  connection.query(sql2, function (err, results) {
+  connection.query(sql3, function (err, results) {
     console.log(results);
+
+    let fid = results[0].food_id;
     if (err) throw err;
-    else res.send(results);
+    console.log(fid);
+    sql2 = sql2 + `insert into order_details values(${oid},${fid},1)`;
+
+    connection.query(sql2, function (err, results1) {
+      if (err) throw err;
+      res.send(results1);
+    });
   });
 
   console.log(post);
