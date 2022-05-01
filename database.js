@@ -4,6 +4,7 @@ var connection = mysql.createConnection({
   database: "homedelivery",
   user: "root",
   password: "Shishir@123",
+  multipleStatements: true,
 });
 
 export default connection;

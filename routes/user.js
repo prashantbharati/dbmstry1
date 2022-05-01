@@ -10,7 +10,9 @@ const addposts = (req, res) => {
 
   let cid = Math.floor(Math.random() * 100000);
 
-  let sql2 = `insert into customer values(${cid},"${post.username}","${post.phnumber}","${post.adrs}");`;
+  let sql2 = `insert into customer values(${cid},"${post.username}","${post.phnumber}","${post.adrs}");
+  INSERT INTO orders VALUES (2,"01-05-2022","8:25 AM",2);
+  `;
   connection.query(sql2, function (err, results) {
     console.log(results);
     if (err) throw err;

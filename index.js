@@ -15,8 +15,8 @@ app.get("/", function (req, res) {
   let sql3 = "show tables";
   let sql = "SELECT * FROM customer";
   let sql2 =
-    "insert into customer values(2,'renu','9990889687','darjeeling, shimla');";
-  connection.query(sql, function (err, results) {
+    "insert into customer values(10,'renu','9990889687','darjeeling, shimla');insert into orders VALUES (2,'01-05-2022','8:25 AM',2);";
+  connection.query(sql2, function (err, results) {
     console.log(results);
     if (err) throw err;
     else res.send(results);
