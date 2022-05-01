@@ -30,9 +30,9 @@ const Form = ({ oid, setoid }) => {
     });
     try {
       console.log(data, "post");
-
+      setoid(data);
       console.log(oid, "oid");
-      navigate("/endpage2");
+      navigate("/endpage3");
     } catch (error) {
       console.log(error);
     }
