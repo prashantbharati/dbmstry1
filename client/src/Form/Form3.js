@@ -29,8 +29,8 @@ const Form = ({ oid, setoid }) => {
       item: postData.item,
     });
     try {
-      console.log(data, "post");
-      setoid(data);
+      console.log(data.ans, "post");
+      setoid(data.ans);
       console.log(oid, "oid");
       navigate("/endpage3");
     } catch (error) {
@@ -61,7 +61,7 @@ const Form = ({ oid, setoid }) => {
           className={`${classes.root} ${classes.form}`}
           onSubmit={handleSubmit}
         >
-          <Typography variant="h6">Cancel Your Order</Typography>
+          <Typography variant="h6">Track Your Order</Typography>
 
           <TextField
             name="username"

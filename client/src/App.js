@@ -4,12 +4,13 @@ import User from "./User.js";
 import Guy from "./Guy.js";
 import Endpage1 from "./endpage1";
 import Endpage2 from "./endpage2";
+import Endpage3 from "./endpage3";
 import Cancelorder from "./cancelorder.js";
 import Trackorder from "./trackorder.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
-  const [oid, setoid] = useState(-1);
+  const [oid, setoid] = useState(29);
   return (
     <BrowserRouter>
       <Routes>
@@ -41,6 +42,11 @@ const App = () => {
           path="/endpage2"
           exact
           element={<Endpage2 oid={oid} setoid={setoid} />}
+        />
+        <Route
+          path="/endpage3"
+          exact
+          element={<Endpage3 oid={oid} setoid={setoid} />}
         />
       </Routes>
     </BrowserRouter>
