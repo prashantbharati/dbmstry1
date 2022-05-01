@@ -11,17 +11,17 @@ const Nav = () => {
         <Grid container>
           <Grid item md={3}>
             <a id="home" className={classes.headerullia} href="/">
-              <Typography>Track Order</Typography>
+              <Typography>Orders</Typography>
             </a>
           </Grid>
           <Grid item md={3}>
-            <a id="filter" className={classes.headerullia} href="/cancelorder">
-              <Typography>Cancel Order</Typography>
+            <a id="filter" className={classes.headerullia} href="/filter">
+              <Typography>Customers</Typography>
             </a>
           </Grid>
           <Grid item md={3}>
             <a id="iwell" className={classes.headerullia} href="/iwell">
-              <Typography>Make Payment</Typography>
+              <Typography>Check Payment</Typography>
             </a>
           </Grid>
 

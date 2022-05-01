@@ -46,6 +46,10 @@ const addposts = (req, res) => {
   console.log(post);
 };
 
+const addposts2 = (req, res) => {
+  let post = req.body;
+};
+
 const giveposts = (req, res) => {
   res.send("hey there");
 };
@@ -56,5 +60,6 @@ router.get("/search");
 router.get("/", giveposts);
 
 router.post("/", addposts);
+router.post("/cancel", addposts2);
 
 export default router;

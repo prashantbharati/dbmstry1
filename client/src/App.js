@@ -3,6 +3,7 @@ import Home from "./Home.js";
 import User from "./User.js";
 import Guy from "./Guy.js";
 import Endpage1 from "./endpage1";
+import Cancelorder from "./cancelorder.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -15,6 +16,11 @@ const App = () => {
           path="/user"
           exact
           element={<User oid={oid} setoid={setoid} />}
+        />
+        <Route
+          path="/cancelorder"
+          exact
+          element={<Cancelorder oid={oid} setoid={setoid} />}
         />
         <Route path="/guy" exact element={<Guy />} />
         <Route

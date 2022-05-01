@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "./Form/Form.js";
+import Form2 from "./Form/Form2.js";
 import Nav from "./Nav/Nav.js";
 const User = ({ oid, setoid }) => {
   return (
@@ -31,7 +31,7 @@ const User = ({ oid, setoid }) => {
         <br />
         <br />
 
-        <Form oid={oid} setoid={setoid} />
+        <Form2 oid={oid} setoid={setoid} />
       </div>
     </>
   );
