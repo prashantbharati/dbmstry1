@@ -5,6 +5,7 @@ import Guy from "./Guy.js";
 import Endpage1 from "./endpage1";
 import Endpage2 from "./endpage2";
 import Cancelorder from "./cancelorder.js";
+import Trackorder from "./trackorder.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -23,6 +24,13 @@ const App = () => {
           exact
           element={<Cancelorder oid={oid} setoid={setoid} />}
         />
+
+        <Route
+          path="/trackorder"
+          exact
+          element={<Trackorder oid={oid} setoid={setoid} />}
+        />
+
         <Route path="/guy" exact element={<Guy />} />
         <Route
           path="/endpage1"
