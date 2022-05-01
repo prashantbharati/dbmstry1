@@ -32,7 +32,7 @@ const Form = ({ oid, setoid }) => {
       console.log(data, "post");
 
       console.log(oid, "oid");
-      navigate("/endpage1");
+      navigate("/endpage2");
     } catch (error) {
       console.log(error);
     }
