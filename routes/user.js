@@ -32,7 +32,10 @@ const addposts = (req, res) => {
     let fid = results[0].food_id;
     if (err) throw err;
     console.log(fid);
-    sql2 = sql2 + `insert into order_details values(${oid},${fid},1)`;
+    sql2 =
+      sql2 +
+      `insert into order_details values(${oid},${fid},1);\n` +
+      `insert into delivery values (${oid},"${time}","${time + 30}")`;
 
     connection.query(sql2, function (err, results1) {
       if (err) throw err;
