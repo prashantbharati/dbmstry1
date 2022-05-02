@@ -14,19 +14,25 @@ export default function BasicTable({ data1 }) {
         <TableHead>
           <TableRow>
             <TableCell style={{ fontWeight: "bold", fontSize: "25px" }}>
-              Full Name
+              Customer Id
             </TableCell>
             <TableCell
               align="right"
               style={{ fontWeight: "bold", fontSize: "25px" }}
             >
-              Username
+              Customer Name
             </TableCell>
             <TableCell
               align="right"
               style={{ fontWeight: "bold", fontSize: "25px" }}
             >
-              Email&nbsp;(g)
+              Address
+            </TableCell>
+            <TableCell
+              align="right"
+              style={{ fontWeight: "bold", fontSize: "25px" }}
+            >
+              Contact Number
             </TableCell>
           </TableRow>
         </TableHead>
@@ -34,10 +40,11 @@ export default function BasicTable({ data1 }) {
           {data1.map((row) => (
             <TableRow>
               <TableCell component="th" scope="row">
-                {row.fullname}
+                {row.customer_id}
               </TableCell>
               <TableCell align="right">{row.customer_name}</TableCell>
               <TableCell align="right">{row.address}</TableCell>
+              <TableCell align="right">{row.contact_number}</TableCell>
             </TableRow>
           ))}
         </TableBody>
