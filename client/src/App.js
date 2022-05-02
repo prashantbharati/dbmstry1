@@ -10,6 +10,7 @@ import Endpage4 from "./endpage4";
 import Cancelorder from "./cancelorder.js";
 import Trackorder from "./trackorder.js";
 import Getorders from "./getorders.js";
+import Paymentcheck from "./paymentcheck.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
 
         <Route path="/guy" exact element={<Guy />} />
         <Route path="/getorders" exact element={<Getorders />} />
+        <Route path="/paymentcheck" exact element={<Paymentcheck />} />
         <Route
           path="/endpage1"
           exact

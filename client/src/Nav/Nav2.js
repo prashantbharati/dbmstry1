@@ -20,7 +20,7 @@ const Nav = () => {
             </a>
           </Grid>
           <Grid item md={3}>
-            <a id="iwell" className={classes.headerullia} href="/iwell">
+            <a id="iwell" className={classes.headerullia} href="/paymentcheck">
               <Typography>Check Payment</Typography>
             </a>
           </Grid>
