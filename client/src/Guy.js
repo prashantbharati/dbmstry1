@@ -36,7 +36,7 @@ const Guy = ({ oid, setoid }) => {
       <div
         style={{
           display: "flex",
-          height: "100vh",
+          height: "400vh",
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
@@ -44,12 +44,6 @@ const Guy = ({ oid, setoid }) => {
             "linear-gradient(90deg,rgb(227, 16, 255) 0%,rgb(255, 252, 100) 100%)",
         }}
       >
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-
         <div>
           <BasicTable data1={res} />
         </div>
