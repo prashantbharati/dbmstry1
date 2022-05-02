@@ -15,7 +15,7 @@ const Nav = () => {
             </a>
           </Grid>
           <Grid item md={3}>
-            <a id="filter" className={classes.headerullia} href="/filter">
+            <a id="filter" className={classes.headerullia} href="/guy">
               <Typography>Customers</Typography>
             </a>
           </Grid>
