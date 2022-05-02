@@ -11,9 +11,19 @@ const getcustomers = (req, res) => {
   });
 };
 
+const getorders = (req, res) => {
+  let sql = "select * from orders;";
+
+  connection.query(sql, function (err, results1) {
+    if (err) throw err;
+    res.status(200).json({ ans: results1 });
+  });
+};
+
 const router = express.Router();
 
 router.get("/customer", getcustomers);
+router.get("/orders", getorders);
 router.get("/");
 
 router.post("/");
