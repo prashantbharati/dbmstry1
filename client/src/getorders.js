@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import Nav2 from "./Nav/Nav2.js";
 import axios from "axios";
-import BasicTable2 from "./table";
+import BasicTable from "./table2";
 const api = axios.create({
-  baseURL: `http://localhost:5000/guy/customer`,
+  baseURL: `http://localhost:5000/guy/orders`,
 });
 const Guy = ({ oid, setoid }) => {
   const [res, setresult] = useState([]);
@@ -45,7 +45,7 @@ const Guy = ({ oid, setoid }) => {
         }}
       >
         <div>
-          <BasicTable2 data1={res} />
+          <BasicTable data1={res} />
         </div>
       </div>
     </>

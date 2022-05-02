@@ -10,7 +10,7 @@ const Nav = () => {
       <div style={{ height: "5vh" }} className={classes.header}>
         <Grid container>
           <Grid item md={3}>
-            <a id="home" className={classes.headerullia} href="/">
+            <a id="home" className={classes.headerullia} href="/getorders">
               <Typography>Orders</Typography>
             </a>
           </Grid>
