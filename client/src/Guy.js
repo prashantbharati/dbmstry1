@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Form from "./Form/Form.js";
 import Nav2 from "./Nav/Nav2.js";
+import axios from "axios";
+const api = axios.create({
+  baseURL: `http://localhost:5000/guy/customer`,
+});
 const User = ({ oid, setoid }) => {
+  const getdata = async () => {
+    const { data } = await api.get("/");
+
+    console.log(data);
+  };
+
+  useEffect(getdata);
+  //   getdata();
+
   return (
     <>
       <div
