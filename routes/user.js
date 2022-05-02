@@ -107,6 +107,35 @@ const addposts3 = (req, res) => {
   });
 };
 
+const addposts4 = (req, res) => {
+  let post = req.body;
+
+  let sql = `select customer_id from customer where customer_name="${post.username}"`;
+  let amount = post.amount;
+  connection.query(sql, function (err, results) {
+    console.log(results);
+    if (err) throw err;
+    let cid = results[0].customer_id;
+    console.log(cid);
+
+    let sql2 = `select order_id from orders where customer_id=${cid}`;
+
+    connection.query(sql2, function (err, results1) {
+      if (err) throw err;
+      let oid = results1[0].order_id;
+      let sql3 = `insert into payments values (${oid},${amount},${
+        amount + 17
+      })`;
+      console.log(oid);
+      connection.query(sql3, function (err, results) {
+        if (err) throw err;
+      });
+
+      res.send(results1);
+    });
+  });
+};
+
 const giveposts = (req, res) => {
   res.send("hey there");
 };
@@ -119,5 +148,6 @@ router.get("/", giveposts);
 router.post("/", addposts);
 router.post("/cancel", addposts2);
 router.post("/track", addposts3);
+router.post("/payment", addposts4);
 
 export default router;
