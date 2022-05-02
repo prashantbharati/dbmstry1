@@ -6,6 +6,7 @@ import Endpage1 from "./endpage1";
 import Endpage2 from "./endpage2";
 import Payorder from "./payment.js";
 import Endpage3 from "./endpage3";
+import Endpage4 from "./endpage4";
 import Cancelorder from "./cancelorder.js";
 import Trackorder from "./trackorder.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -54,6 +55,11 @@ const App = () => {
           path="/endpage3"
           exact
           element={<Endpage3 oid={oid} setoid={setoid} />}
+        />
+        <Route
+          path="/endpage4"
+          exact
+          element={<Endpage4 oid={oid} setoid={setoid} />}
         />
       </Routes>
     </BrowserRouter>
