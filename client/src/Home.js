@@ -21,14 +21,13 @@ const Home = () => {
         >
           <div className={classes.div11}>
             <Typography className={classes.div1text}>
-              Never Pay Without Using Skropay
+              Enjoy Delievery Like Never Before
             </Typography>
 
             <br />
             <Typography style={{ color: "grey" }}>
-              Skropay is a secure transaction platform that completely protects
-              you from being scammed when you want to buy or sell online with
-              someone you don't know
+              All things delivered within 30 mins or complete moneyback
+              guranteed
             </Typography>
 
             <br />
