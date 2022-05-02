@@ -1,19 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "./Form/Form.js";
 import Nav2 from "./Nav/Nav2.js";
 import axios from "axios";
+import BasicTable from "./table";
 const api = axios.create({
   baseURL: `http://localhost:5000/guy/customer`,
 });
-const User = ({ oid, setoid }) => {
-  const getdata = async () => {
+const Guy = ({ oid, setoid }) => {
+  const [res, setresult] = useState([]);
+
+  const perform = async () => {
     const { data } = await api.get("/");
 
-    console.log(data);
+    console.log(data.ans);
+    setresult(data.ans);
+    console.log(res);
   };
 
-  useEffect(getdata);
-  //   getdata();
+  useEffect(() => {
+    perform();
+  }, []);
 
   return (
     <>
@@ -44,9 +50,11 @@ const User = ({ oid, setoid }) => {
         <br />
         <br />
 
-        <Form oid={oid} setoid={setoid} />
+        <div>
+          <BasicTable data1={res} />
+        </div>
       </div>
     </>
   );
 };
-export default User;
+export default Guy;
