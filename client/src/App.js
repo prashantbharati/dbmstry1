@@ -4,6 +4,7 @@ import User from "./User.js";
 import Guy from "./Guy.js";
 import Endpage1 from "./endpage1";
 import Endpage2 from "./endpage2";
+import Payorder from "./payment.js";
 import Endpage3 from "./endpage3";
 import Cancelorder from "./cancelorder.js";
 import Trackorder from "./trackorder.js";
@@ -30,6 +31,12 @@ const App = () => {
           path="/trackorder"
           exact
           element={<Trackorder oid={oid} setoid={setoid} />}
+        />
+
+        <Route
+          path="/payment"
+          exact
+          element={<Payorder oid={oid} setoid={setoid} />}
         />
 
         <Route path="/guy" exact element={<Guy />} />

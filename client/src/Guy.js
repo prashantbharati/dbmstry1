@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Form from "./Form/Form.js";
+
 import Nav2 from "./Nav/Nav2.js";
 import axios from "axios";
 import BasicTable from "./table";
@@ -36,7 +36,7 @@ const Guy = ({ oid, setoid }) => {
       <div
         style={{
           display: "flex",
-          height: "400vh",
+          height: "300vh",
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
