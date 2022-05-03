@@ -61,7 +61,7 @@ const Form = ({ oid, setoid }) => {
           className={`${classes.root} ${classes.form}`}
           onSubmit={handleSubmit}
         >
-          <Typography variant="h6">Make Payment</Typography>
+          <Typography variant="h6">Check Payment</Typography>
 
           <TextField
             name="username"
@@ -71,17 +71,6 @@ const Form = ({ oid, setoid }) => {
             value={postData.username}
             onChange={(e) =>
               setPostData({ ...postData, username: e.target.value })
-            }
-          />
-
-          <TextField
-            name="username"
-            variant="outlined"
-            label="Enter Amount"
-            fullWidth
-            value={postData.amount}
-            onChange={(e) =>
-              setPostData({ ...postData, amount: e.target.value })
             }
           />
 
@@ -104,7 +93,7 @@ const Form = ({ oid, setoid }) => {
             type="submit"
             fullWidth
           >
-            Pay
+            Check Payment
           </Button>
           <Button
             variant="contained"

@@ -20,10 +20,15 @@ const getorders = (req, res) => {
   });
 };
 
+const getpayment=()=>{
+  
+}
+
 const router = express.Router();
 
 router.get("/customer", getcustomers);
 router.get("/orders", getorders);
+router.get("/paymentcheck",getpayment);
 router.get("/");
 
 router.post("/");
